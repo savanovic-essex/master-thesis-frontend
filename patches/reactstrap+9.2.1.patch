@@ -1,0 +1,1519 @@
+diff --git a/node_modules/reactstrap/esm/List.js b/node_modules/reactstrap/esm/List.js
+deleted file mode 100644
+index bb7c1f6..0000000
+--- a/node_modules/reactstrap/esm/List.js
++++ /dev/null
+@@ -1,34 +0,0 @@
+-var _excluded = ["className", "cssModule", "tag", "type"];
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-import React, { forwardRef } from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-var propTypes = {
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Set a custom element for this component */
+-  tag: tagPropType,
+-  /** Type of list `unstyled` or `inline` */
+-  type: PropTypes.string
+-};
+-var List = /*#__PURE__*/forwardRef(function (props, ref) {
+-  var className = props.className,
+-    cssModule = props.cssModule,
+-    _props$tag = props.tag,
+-    Tag = _props$tag === void 0 ? 'ul' : _props$tag,
+-    type = props.type,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  var classes = mapToCssModules(classNames(className, type ? "list-".concat(type) : false), cssModule);
+-  return /*#__PURE__*/React.createElement(Tag, _extends({}, attributes, {
+-    className: classes,
+-    ref: ref
+-  }));
+-});
+-List.name = 'List';
+-List.propTypes = propTypes;
+-export default List;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/esm/ListGroup.js b/node_modules/reactstrap/esm/ListGroup.js
+deleted file mode 100644
+index 6dd4fc9..0000000
+--- a/node_modules/reactstrap/esm/ListGroup.js
++++ /dev/null
+@@ -1,54 +0,0 @@
+-var _excluded = ["className", "cssModule", "tag", "flush", "horizontal", "numbered"];
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-import React from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-var propTypes = {
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Remove borders to make the list appear flush */
+-  flush: PropTypes.bool,
+-  /** Make the list horizontal instead of vertical */
+-  horizontal: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+-  /** Add number to the ListItems */
+-  numbered: PropTypes.bool,
+-  /** Set a custom element for this component */
+-  tag: tagPropType
+-};
+-var getHorizontalClass = function getHorizontalClass(horizontal) {
+-  if (horizontal === false) {
+-    return false;
+-  }
+-  if (horizontal === true || horizontal === 'xs') {
+-    return 'list-group-horizontal';
+-  }
+-  return "list-group-horizontal-".concat(horizontal);
+-};
+-function ListGroup(props) {
+-  var className = props.className,
+-    cssModule = props.cssModule,
+-    _props$tag = props.tag,
+-    Tag = _props$tag === void 0 ? 'ul' : _props$tag,
+-    flush = props.flush,
+-    _props$horizontal = props.horizontal,
+-    horizontal = _props$horizontal === void 0 ? false : _props$horizontal,
+-    _props$numbered = props.numbered,
+-    numbered = _props$numbered === void 0 ? false : _props$numbered,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  var classes = mapToCssModules(classNames(className, 'list-group',
+-  // list-group-horizontal cannot currently be mixed with list-group-flush
+-  // we only try to apply horizontal classes if flush is false
+-  flush ? 'list-group-flush' : getHorizontalClass(horizontal), {
+-    'list-group-numbered': numbered
+-  }), cssModule);
+-  return /*#__PURE__*/React.createElement(Tag, _extends({}, attributes, {
+-    className: classes
+-  }));
+-}
+-ListGroup.propTypes = propTypes;
+-export default ListGroup;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/esm/ListGroupItem.js b/node_modules/reactstrap/esm/ListGroupItem.js
+deleted file mode 100644
+index 5195056..0000000
+--- a/node_modules/reactstrap/esm/ListGroupItem.js
++++ /dev/null
+@@ -1,49 +0,0 @@
+-var _excluded = ["className", "cssModule", "tag", "active", "disabled", "action", "color"];
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-import React from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-var propTypes = {
+-  /** Add action prop to give effects while hovering over element */
+-  action: PropTypes.bool,
+-  /** Add active prop to make the current selection active */
+-  active: PropTypes.bool,
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Add background colour to the list item */
+-  color: PropTypes.string,
+-  /** Make the list item appear disabled */
+-  disabled: PropTypes.bool,
+-  /** Set a custom element for this component */
+-  tag: tagPropType
+-};
+-var handleDisabledOnClick = function handleDisabledOnClick(e) {
+-  e.preventDefault();
+-};
+-function ListGroupItem(props) {
+-  var className = props.className,
+-    cssModule = props.cssModule,
+-    _props$tag = props.tag,
+-    Tag = _props$tag === void 0 ? 'li' : _props$tag,
+-    active = props.active,
+-    disabled = props.disabled,
+-    action = props.action,
+-    color = props.color,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  var classes = mapToCssModules(classNames(className, active ? 'active' : false, disabled ? 'disabled' : false, action ? 'list-group-item-action' : false, color ? "list-group-item-".concat(color) : false, 'list-group-item'), cssModule);
+-
+-  // Prevent click event when disabled.
+-  if (disabled) {
+-    attributes.onClick = handleDisabledOnClick;
+-  }
+-  return /*#__PURE__*/React.createElement(Tag, _extends({}, attributes, {
+-    className: classes
+-  }));
+-}
+-ListGroupItem.propTypes = propTypes;
+-export default ListGroupItem;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/esm/ListGroupItemHeading.js b/node_modules/reactstrap/esm/ListGroupItemHeading.js
+deleted file mode 100644
+index a053c26..0000000
+--- a/node_modules/reactstrap/esm/ListGroupItemHeading.js
++++ /dev/null
+@@ -1,29 +0,0 @@
+-var _excluded = ["className", "cssModule", "tag"];
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-import React from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-var propTypes = {
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Set a custom element for this component */
+-  tag: tagPropType
+-};
+-function ListGroupItemHeading(props) {
+-  var className = props.className,
+-    cssModule = props.cssModule,
+-    _props$tag = props.tag,
+-    Tag = _props$tag === void 0 ? 'h5' : _props$tag,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  var classes = mapToCssModules(classNames(className, 'list-group-item-heading'), cssModule);
+-  return /*#__PURE__*/React.createElement(Tag, _extends({}, attributes, {
+-    className: classes
+-  }));
+-}
+-ListGroupItemHeading.propTypes = propTypes;
+-export default ListGroupItemHeading;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/esm/ListGroupItemText.js b/node_modules/reactstrap/esm/ListGroupItemText.js
+deleted file mode 100644
+index 4dd7051..0000000
+--- a/node_modules/reactstrap/esm/ListGroupItemText.js
++++ /dev/null
+@@ -1,29 +0,0 @@
+-var _excluded = ["className", "cssModule", "tag"];
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-import React from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-var propTypes = {
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Set a custom element for this component */
+-  tag: tagPropType
+-};
+-function ListGroupItemText(props) {
+-  var className = props.className,
+-    cssModule = props.cssModule,
+-    _props$tag = props.tag,
+-    Tag = _props$tag === void 0 ? 'p' : _props$tag,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  var classes = mapToCssModules(classNames(className, 'list-group-item-text'), cssModule);
+-  return /*#__PURE__*/React.createElement(Tag, _extends({}, attributes, {
+-    className: classes
+-  }));
+-}
+-ListGroupItemText.propTypes = propTypes;
+-export default ListGroupItemText;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/esm/ListInlineItem.js b/node_modules/reactstrap/esm/ListInlineItem.js
+deleted file mode 100644
+index f87502b..0000000
+--- a/node_modules/reactstrap/esm/ListInlineItem.js
++++ /dev/null
+@@ -1,31 +0,0 @@
+-var _excluded = ["className", "cssModule", "tag"];
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-import React, { forwardRef } from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-var propTypes = {
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Set a custom element for this component */
+-  tag: tagPropType
+-};
+-var ListInlineItem = /*#__PURE__*/forwardRef(function (props, ref) {
+-  var className = props.className,
+-    cssModule = props.cssModule,
+-    _props$tag = props.tag,
+-    Tag = _props$tag === void 0 ? 'li' : _props$tag,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  var classes = mapToCssModules(classNames(className, 'list-inline-item'), cssModule);
+-  return /*#__PURE__*/React.createElement(Tag, _extends({}, attributes, {
+-    className: classes,
+-    ref: ref
+-  }));
+-});
+-ListInlineItem.name = 'ListInlineItem';
+-ListInlineItem.propTypes = propTypes;
+-export default ListInlineItem;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/lib/List.js b/node_modules/reactstrap/lib/List.js
+deleted file mode 100644
+index c0c961e..0000000
+--- a/node_modules/reactstrap/lib/List.js
++++ /dev/null
+@@ -1,45 +0,0 @@
+-"use strict";
+-
+-Object.defineProperty(exports, "__esModule", {
+-  value: true
+-});
+-exports.default = void 0;
+-var _react = _interopRequireWildcard(require("react"));
+-var _propTypes = _interopRequireDefault(require("prop-types"));
+-var _classnames = _interopRequireDefault(require("classnames"));
+-var _utils = require("./utils");
+-const _excluded = ["className", "cssModule", "tag", "type"];
+-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-const propTypes = {
+-  /** Add custom class */
+-  className: _propTypes.default.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: _propTypes.default.object,
+-  /** Set a custom element for this component */
+-  tag: _utils.tagPropType,
+-  /** Type of list `unstyled` or `inline` */
+-  type: _propTypes.default.string
+-};
+-const List = /*#__PURE__*/(0, _react.forwardRef)((props, ref) => {
+-  const {
+-      className,
+-      cssModule,
+-      tag: Tag = 'ul',
+-      type
+-    } = props,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  const classes = (0, _utils.mapToCssModules)((0, _classnames.default)(className, type ? `list-${type}` : false), cssModule);
+-  return /*#__PURE__*/_react.default.createElement(Tag, _extends({}, attributes, {
+-    className: classes,
+-    ref: ref
+-  }));
+-});
+-List.name = 'List';
+-List.propTypes = propTypes;
+-var _default = List;
+-exports.default = _default;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/lib/ListGroup.js b/node_modules/reactstrap/lib/ListGroup.js
+deleted file mode 100644
+index 8e8ad9d..0000000
+--- a/node_modules/reactstrap/lib/ListGroup.js
++++ /dev/null
+@@ -1,61 +0,0 @@
+-"use strict";
+-
+-Object.defineProperty(exports, "__esModule", {
+-  value: true
+-});
+-exports.default = void 0;
+-var _react = _interopRequireDefault(require("react"));
+-var _propTypes = _interopRequireDefault(require("prop-types"));
+-var _classnames = _interopRequireDefault(require("classnames"));
+-var _utils = require("./utils");
+-const _excluded = ["className", "cssModule", "tag", "flush", "horizontal", "numbered"];
+-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-const propTypes = {
+-  /** Add custom class */
+-  className: _propTypes.default.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: _propTypes.default.object,
+-  /** Remove borders to make the list appear flush */
+-  flush: _propTypes.default.bool,
+-  /** Make the list horizontal instead of vertical */
+-  horizontal: _propTypes.default.oneOfType([_propTypes.default.bool, _propTypes.default.string]),
+-  /** Add number to the ListItems */
+-  numbered: _propTypes.default.bool,
+-  /** Set a custom element for this component */
+-  tag: _utils.tagPropType
+-};
+-const getHorizontalClass = horizontal => {
+-  if (horizontal === false) {
+-    return false;
+-  }
+-  if (horizontal === true || horizontal === 'xs') {
+-    return 'list-group-horizontal';
+-  }
+-  return `list-group-horizontal-${horizontal}`;
+-};
+-function ListGroup(props) {
+-  const {
+-      className,
+-      cssModule,
+-      tag: Tag = 'ul',
+-      flush,
+-      horizontal = false,
+-      numbered = false
+-    } = props,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  const classes = (0, _utils.mapToCssModules)((0, _classnames.default)(className, 'list-group',
+-  // list-group-horizontal cannot currently be mixed with list-group-flush
+-  // we only try to apply horizontal classes if flush is false
+-  flush ? 'list-group-flush' : getHorizontalClass(horizontal), {
+-    'list-group-numbered': numbered
+-  }), cssModule);
+-  return /*#__PURE__*/_react.default.createElement(Tag, _extends({}, attributes, {
+-    className: classes
+-  }));
+-}
+-ListGroup.propTypes = propTypes;
+-var _default = ListGroup;
+-exports.default = _default;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/lib/ListGroupItem.js b/node_modules/reactstrap/lib/ListGroupItem.js
+deleted file mode 100644
+index 5cc9f67..0000000
+--- a/node_modules/reactstrap/lib/ListGroupItem.js
++++ /dev/null
+@@ -1,58 +0,0 @@
+-"use strict";
+-
+-Object.defineProperty(exports, "__esModule", {
+-  value: true
+-});
+-exports.default = void 0;
+-var _react = _interopRequireDefault(require("react"));
+-var _propTypes = _interopRequireDefault(require("prop-types"));
+-var _classnames = _interopRequireDefault(require("classnames"));
+-var _utils = require("./utils");
+-const _excluded = ["className", "cssModule", "tag", "active", "disabled", "action", "color"];
+-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-const propTypes = {
+-  /** Add action prop to give effects while hovering over element */
+-  action: _propTypes.default.bool,
+-  /** Add active prop to make the current selection active */
+-  active: _propTypes.default.bool,
+-  /** Add custom class */
+-  className: _propTypes.default.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: _propTypes.default.object,
+-  /** Add background colour to the list item */
+-  color: _propTypes.default.string,
+-  /** Make the list item appear disabled */
+-  disabled: _propTypes.default.bool,
+-  /** Set a custom element for this component */
+-  tag: _utils.tagPropType
+-};
+-const handleDisabledOnClick = e => {
+-  e.preventDefault();
+-};
+-function ListGroupItem(props) {
+-  const {
+-      className,
+-      cssModule,
+-      tag: Tag = 'li',
+-      active,
+-      disabled,
+-      action,
+-      color
+-    } = props,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  const classes = (0, _utils.mapToCssModules)((0, _classnames.default)(className, active ? 'active' : false, disabled ? 'disabled' : false, action ? 'list-group-item-action' : false, color ? `list-group-item-${color}` : false, 'list-group-item'), cssModule);
+-
+-  // Prevent click event when disabled.
+-  if (disabled) {
+-    attributes.onClick = handleDisabledOnClick;
+-  }
+-  return /*#__PURE__*/_react.default.createElement(Tag, _extends({}, attributes, {
+-    className: classes
+-  }));
+-}
+-ListGroupItem.propTypes = propTypes;
+-var _default = ListGroupItem;
+-exports.default = _default;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/lib/ListGroupItemHeading.js b/node_modules/reactstrap/lib/ListGroupItemHeading.js
+deleted file mode 100644
+index 6123a09..0000000
+--- a/node_modules/reactstrap/lib/ListGroupItemHeading.js
++++ /dev/null
+@@ -1,38 +0,0 @@
+-"use strict";
+-
+-Object.defineProperty(exports, "__esModule", {
+-  value: true
+-});
+-exports.default = void 0;
+-var _react = _interopRequireDefault(require("react"));
+-var _propTypes = _interopRequireDefault(require("prop-types"));
+-var _classnames = _interopRequireDefault(require("classnames"));
+-var _utils = require("./utils");
+-const _excluded = ["className", "cssModule", "tag"];
+-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-const propTypes = {
+-  /** Add custom class */
+-  className: _propTypes.default.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: _propTypes.default.object,
+-  /** Set a custom element for this component */
+-  tag: _utils.tagPropType
+-};
+-function ListGroupItemHeading(props) {
+-  const {
+-      className,
+-      cssModule,
+-      tag: Tag = 'h5'
+-    } = props,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  const classes = (0, _utils.mapToCssModules)((0, _classnames.default)(className, 'list-group-item-heading'), cssModule);
+-  return /*#__PURE__*/_react.default.createElement(Tag, _extends({}, attributes, {
+-    className: classes
+-  }));
+-}
+-ListGroupItemHeading.propTypes = propTypes;
+-var _default = ListGroupItemHeading;
+-exports.default = _default;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/lib/ListGroupItemText.js b/node_modules/reactstrap/lib/ListGroupItemText.js
+deleted file mode 100644
+index e1a9254..0000000
+--- a/node_modules/reactstrap/lib/ListGroupItemText.js
++++ /dev/null
+@@ -1,38 +0,0 @@
+-"use strict";
+-
+-Object.defineProperty(exports, "__esModule", {
+-  value: true
+-});
+-exports.default = void 0;
+-var _react = _interopRequireDefault(require("react"));
+-var _propTypes = _interopRequireDefault(require("prop-types"));
+-var _classnames = _interopRequireDefault(require("classnames"));
+-var _utils = require("./utils");
+-const _excluded = ["className", "cssModule", "tag"];
+-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-const propTypes = {
+-  /** Add custom class */
+-  className: _propTypes.default.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: _propTypes.default.object,
+-  /** Set a custom element for this component */
+-  tag: _utils.tagPropType
+-};
+-function ListGroupItemText(props) {
+-  const {
+-      className,
+-      cssModule,
+-      tag: Tag = 'p'
+-    } = props,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  const classes = (0, _utils.mapToCssModules)((0, _classnames.default)(className, 'list-group-item-text'), cssModule);
+-  return /*#__PURE__*/_react.default.createElement(Tag, _extends({}, attributes, {
+-    className: classes
+-  }));
+-}
+-ListGroupItemText.propTypes = propTypes;
+-var _default = ListGroupItemText;
+-exports.default = _default;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/lib/ListInlineItem.js b/node_modules/reactstrap/lib/ListInlineItem.js
+deleted file mode 100644
+index 9b66c88..0000000
+--- a/node_modules/reactstrap/lib/ListInlineItem.js
++++ /dev/null
+@@ -1,42 +0,0 @@
+-"use strict";
+-
+-Object.defineProperty(exports, "__esModule", {
+-  value: true
+-});
+-exports.default = void 0;
+-var _react = _interopRequireWildcard(require("react"));
+-var _propTypes = _interopRequireDefault(require("prop-types"));
+-var _classnames = _interopRequireDefault(require("classnames"));
+-var _utils = require("./utils");
+-const _excluded = ["className", "cssModule", "tag"];
+-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+-const propTypes = {
+-  /** Add custom class */
+-  className: _propTypes.default.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: _propTypes.default.object,
+-  /** Set a custom element for this component */
+-  tag: _utils.tagPropType
+-};
+-const ListInlineItem = /*#__PURE__*/(0, _react.forwardRef)((props, ref) => {
+-  const {
+-      className,
+-      cssModule,
+-      tag: Tag = 'li'
+-    } = props,
+-    attributes = _objectWithoutProperties(props, _excluded);
+-  const classes = (0, _utils.mapToCssModules)((0, _classnames.default)(className, 'list-inline-item'), cssModule);
+-  return /*#__PURE__*/_react.default.createElement(Tag, _extends({}, attributes, {
+-    className: classes,
+-    ref: ref
+-  }));
+-});
+-ListInlineItem.name = 'ListInlineItem';
+-ListInlineItem.propTypes = propTypes;
+-var _default = ListInlineItem;
+-exports.default = _default;
+\ No newline at end of file
+diff --git a/node_modules/reactstrap/src/List.js b/node_modules/reactstrap/src/List.js
+deleted file mode 100644
+index e575569..0000000
+--- a/node_modules/reactstrap/src/List.js
++++ /dev/null
+@@ -1,30 +0,0 @@
+-import React, { forwardRef } from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-
+-const propTypes = {
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Set a custom element for this component */
+-  tag: tagPropType,
+-  /** Type of list `unstyled` or `inline` */
+-  type: PropTypes.string,
+-};
+-
+-const List = forwardRef((props, ref) => {
+-  const { className, cssModule, tag: Tag = 'ul', type, ...attributes } = props;
+-  const classes = mapToCssModules(
+-    classNames(className, type ? `list-${type}` : false),
+-    cssModule,
+-  );
+-
+-  return <Tag {...attributes} className={classes} ref={ref} />;
+-});
+-
+-List.name = 'List';
+-List.propTypes = propTypes;
+-
+-export default List;
+diff --git a/node_modules/reactstrap/src/ListGroup.js b/node_modules/reactstrap/src/ListGroup.js
+deleted file mode 100644
+index a83ca37..0000000
+--- a/node_modules/reactstrap/src/ListGroup.js
++++ /dev/null
+@@ -1,60 +0,0 @@
+-import React from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-
+-const propTypes = {
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Remove borders to make the list appear flush */
+-  flush: PropTypes.bool,
+-  /** Make the list horizontal instead of vertical */
+-  horizontal: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+-  /** Add number to the ListItems */
+-  numbered: PropTypes.bool,
+-  /** Set a custom element for this component */
+-  tag: tagPropType,
+-};
+-
+-const getHorizontalClass = (horizontal) => {
+-  if (horizontal === false) {
+-    return false;
+-  }
+-  if (horizontal === true || horizontal === 'xs') {
+-    return 'list-group-horizontal';
+-  }
+-  return `list-group-horizontal-${horizontal}`;
+-};
+-
+-function ListGroup(props) {
+-  const {
+-    className,
+-    cssModule,
+-    tag: Tag = 'ul',
+-    flush,
+-    horizontal = false,
+-    numbered = false,
+-    ...attributes
+-  } = props;
+-  const classes = mapToCssModules(
+-    classNames(
+-      className,
+-      'list-group',
+-      // list-group-horizontal cannot currently be mixed with list-group-flush
+-      // we only try to apply horizontal classes if flush is false
+-      flush ? 'list-group-flush' : getHorizontalClass(horizontal),
+-      {
+-        'list-group-numbered': numbered,
+-      },
+-    ),
+-    cssModule,
+-  );
+-
+-  return <Tag {...attributes} className={classes} />;
+-}
+-
+-ListGroup.propTypes = propTypes;
+-
+-export default ListGroup;
+diff --git a/node_modules/reactstrap/src/ListGroupItem.js b/node_modules/reactstrap/src/ListGroupItem.js
+deleted file mode 100644
+index 7be57bc..0000000
+--- a/node_modules/reactstrap/src/ListGroupItem.js
++++ /dev/null
+@@ -1,59 +0,0 @@
+-import React from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-
+-const propTypes = {
+-  /** Add action prop to give effects while hovering over element */
+-  action: PropTypes.bool,
+-  /** Add active prop to make the current selection active */
+-  active: PropTypes.bool,
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Add background colour to the list item */
+-  color: PropTypes.string,
+-  /** Make the list item appear disabled */
+-  disabled: PropTypes.bool,
+-  /** Set a custom element for this component */
+-  tag: tagPropType,
+-};
+-
+-const handleDisabledOnClick = (e) => {
+-  e.preventDefault();
+-};
+-
+-function ListGroupItem(props) {
+-  const {
+-    className,
+-    cssModule,
+-    tag: Tag = 'li',
+-    active,
+-    disabled,
+-    action,
+-    color,
+-    ...attributes
+-  } = props;
+-  const classes = mapToCssModules(
+-    classNames(
+-      className,
+-      active ? 'active' : false,
+-      disabled ? 'disabled' : false,
+-      action ? 'list-group-item-action' : false,
+-      color ? `list-group-item-${color}` : false,
+-      'list-group-item',
+-    ),
+-    cssModule,
+-  );
+-
+-  // Prevent click event when disabled.
+-  if (disabled) {
+-    attributes.onClick = handleDisabledOnClick;
+-  }
+-  return <Tag {...attributes} className={classes} />;
+-}
+-
+-ListGroupItem.propTypes = propTypes;
+-
+-export default ListGroupItem;
+diff --git a/node_modules/reactstrap/src/ListGroupItemHeading.js b/node_modules/reactstrap/src/ListGroupItemHeading.js
+deleted file mode 100644
+index a06ec86..0000000
+--- a/node_modules/reactstrap/src/ListGroupItemHeading.js
++++ /dev/null
+@@ -1,27 +0,0 @@
+-import React from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-
+-const propTypes = {
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Set a custom element for this component */
+-  tag: tagPropType,
+-};
+-
+-function ListGroupItemHeading(props) {
+-  const { className, cssModule, tag: Tag = 'h5', ...attributes } = props;
+-  const classes = mapToCssModules(
+-    classNames(className, 'list-group-item-heading'),
+-    cssModule,
+-  );
+-
+-  return <Tag {...attributes} className={classes} />;
+-}
+-
+-ListGroupItemHeading.propTypes = propTypes;
+-
+-export default ListGroupItemHeading;
+diff --git a/node_modules/reactstrap/src/ListGroupItemText.js b/node_modules/reactstrap/src/ListGroupItemText.js
+deleted file mode 100644
+index 527e953..0000000
+--- a/node_modules/reactstrap/src/ListGroupItemText.js
++++ /dev/null
+@@ -1,27 +0,0 @@
+-import React from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-
+-const propTypes = {
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Set a custom element for this component */
+-  tag: tagPropType,
+-};
+-
+-function ListGroupItemText(props) {
+-  const { className, cssModule, tag: Tag = 'p', ...attributes } = props;
+-  const classes = mapToCssModules(
+-    classNames(className, 'list-group-item-text'),
+-    cssModule,
+-  );
+-
+-  return <Tag {...attributes} className={classes} />;
+-}
+-
+-ListGroupItemText.propTypes = propTypes;
+-
+-export default ListGroupItemText;
+diff --git a/node_modules/reactstrap/src/ListInlineItem.js b/node_modules/reactstrap/src/ListInlineItem.js
+deleted file mode 100644
+index 67e8b1a..0000000
+--- a/node_modules/reactstrap/src/ListInlineItem.js
++++ /dev/null
+@@ -1,28 +0,0 @@
+-import React, { forwardRef } from 'react';
+-import PropTypes from 'prop-types';
+-import classNames from 'classnames';
+-import { mapToCssModules, tagPropType } from './utils';
+-
+-const propTypes = {
+-  /** Add custom class */
+-  className: PropTypes.string,
+-  /** Change underlying component's CSS base class name */
+-  cssModule: PropTypes.object,
+-  /** Set a custom element for this component */
+-  tag: tagPropType,
+-};
+-
+-const ListInlineItem = forwardRef((props, ref) => {
+-  const { className, cssModule, tag: Tag = 'li', ...attributes } = props;
+-  const classes = mapToCssModules(
+-    classNames(className, 'list-inline-item'),
+-    cssModule,
+-  );
+-
+-  return <Tag {...attributes} className={classes} ref={ref} />;
+-});
+-
+-ListInlineItem.name = 'ListInlineItem';
+-ListInlineItem.propTypes = propTypes;
+-
+-export default ListInlineItem;
+diff --git a/node_modules/reactstrap/src/__tests__/List.spec.js b/node_modules/reactstrap/src/__tests__/List.spec.js
+deleted file mode 100644
+index a007dcf..0000000
+--- a/node_modules/reactstrap/src/__tests__/List.spec.js
++++ /dev/null
+@@ -1,34 +0,0 @@
+-import React from 'react';
+-import { render, screen } from '@testing-library/react';
+-import { List } from '..';
+-import {
+-  testForCustomClass,
+-  testForCustomTag,
+-  testForDefaultTag,
+-} from '../testUtils';
+-
+-describe('List', () => {
+-  it('should render with "ul" tag', () => {
+-    testForDefaultTag(List, 'ul');
+-  });
+-
+-  it('should render with "list-inline" class when type is "inline"', () => {
+-    render(<List type="inline">Yo!</List>);
+-
+-    expect(screen.getByText('Yo!')).toHaveClass('list-inline');
+-  });
+-
+-  it('should render with "list-unstyled" class when type is "unstyled"', () => {
+-    render(<List type="unstyled">Yo!</List>);
+-
+-    expect(screen.getByText('Yo!')).toHaveClass('list-unstyled');
+-  });
+-
+-  it('should render additional classes', () => {
+-    testForCustomClass(List);
+-  });
+-
+-  it('should render custom tag', () => {
+-    testForCustomTag(List);
+-  });
+-});
+diff --git a/node_modules/reactstrap/src/__tests__/ListGroup.spec.js b/node_modules/reactstrap/src/__tests__/ListGroup.spec.js
+deleted file mode 100644
+index 7a56c94..0000000
+--- a/node_modules/reactstrap/src/__tests__/ListGroup.spec.js
++++ /dev/null
+@@ -1,60 +0,0 @@
+-import React from 'react';
+-import { render, screen } from '@testing-library/react';
+-import { ListGroup } from '..';
+-import {
+-  testForCustomClass,
+-  testForCustomTag,
+-  testForDefaultClass,
+-} from '../testUtils';
+-
+-describe('ListGroup', () => {
+-  it('should render with "list-group" class', () => {
+-    testForDefaultClass(ListGroup, 'list-group');
+-  });
+-
+-  it('should render with "flush"', () => {
+-    render(<ListGroup flush>Yo!</ListGroup>);
+-
+-    expect(screen.getByText('Yo!')).toHaveClass('list-group-flush');
+-    expect(screen.getByText('Yo!')).toHaveClass('list-group');
+-  });
+-
+-  it('should render with "horizontal"', () => {
+-    render(<ListGroup horizontal>Yo!</ListGroup>);
+-
+-    expect(screen.getByText('Yo!')).toHaveClass('list-group-horizontal');
+-  });
+-
+-  it('should not render with "horizontal" if flush is true', () => {
+-    render(
+-      <ListGroup flush horizontal>
+-        Yo!
+-      </ListGroup>,
+-    );
+-
+-    expect(screen.getByText('Yo!')).toHaveClass('list-group');
+-    expect(screen.getByText('Yo!')).toHaveClass('list-group-flush');
+-    expect(screen.getByText('Yo!')).not.toHaveClass('list-group-horizontal');
+-  });
+-
+-  it('should render with "horizontal-{breakpoint}"', () => {
+-    render(<ListGroup horizontal="lg">Yo!</ListGroup>);
+-
+-    expect(screen.getByText('Yo!')).toHaveClass('list-group');
+-    expect(screen.getByText('Yo!')).toHaveClass('list-group-horizontal-lg');
+-  });
+-
+-  it('should render with "numbered"', () => {
+-    render(<ListGroup numbered>Yo!</ListGroup>);
+-
+-    expect(screen.getByText('Yo!')).toHaveClass('list-group-numbered');
+-  });
+-
+-  it('should render additional classes', () => {
+-    testForCustomClass(ListGroup);
+-  });
+-
+-  it('should render custom tag', () => {
+-    testForCustomTag(ListGroup);
+-  });
+-});
+diff --git a/node_modules/reactstrap/src/__tests__/ListGroupItem.spec.js b/node_modules/reactstrap/src/__tests__/ListGroupItem.spec.js
+deleted file mode 100644
+index c9ed6cb..0000000
+--- a/node_modules/reactstrap/src/__tests__/ListGroupItem.spec.js
++++ /dev/null
+@@ -1,47 +0,0 @@
+-import React from 'react';
+-import { render, screen } from '@testing-library/react';
+-import user from '@testing-library/user-event';
+-import { ListGroupItem } from '..';
+-import { testForChildrenInComponent, testForDefaultClass } from '../testUtils';
+-
+-describe('ListGroupItem', () => {
+-  it('should render children', () => {
+-    testForChildrenInComponent(ListGroupItem);
+-  });
+-
+-  it('should render with "list-group-item" class', () => {
+-    testForDefaultClass(ListGroupItem, 'list-group-item');
+-  });
+-
+-  it('should render with "active" class when active is passed', () => {
+-    render(<ListGroupItem active>Yo!</ListGroupItem>);
+-    expect(screen.getByText('Yo!')).toHaveClass('active');
+-  });
+-
+-  it('should render with "disabled" class when disabled is passed', () => {
+-    render(<ListGroupItem disabled>Yo!</ListGroupItem>);
+-    expect(screen.getByText('Yo!')).toHaveClass('disabled');
+-  });
+-
+-  it('should render with "list-group-item-action" class when action is passed', () => {
+-    render(<ListGroupItem action>Yo!</ListGroupItem>);
+-    expect(screen.getByText('Yo!')).toHaveClass('list-group-item-action');
+-  });
+-
+-  it('should render with "list-group-item-${color}" class when color is passed', () => {
+-    render(<ListGroupItem color="success">Yo!</ListGroupItem>);
+-    expect(screen.getByText('Yo!')).toHaveClass('list-group-item-success');
+-  });
+-
+-  it('should prevent click event when disabled is passed', () => {
+-    const onDisableClick = jest.fn();
+-    render(
+-      <ListGroupItem disabled onClick={onDisableClick}>
+-        Yo!
+-      </ListGroupItem>,
+-    );
+-
+-    user.click(screen.getByText('Yo!'));
+-    expect(onDisableClick).not.toHaveBeenCalled();
+-  });
+-});
+diff --git a/node_modules/reactstrap/src/__tests__/ListGroupItemHeading.spec.js b/node_modules/reactstrap/src/__tests__/ListGroupItemHeading.spec.js
+deleted file mode 100644
+index 9149970..0000000
+--- a/node_modules/reactstrap/src/__tests__/ListGroupItemHeading.spec.js
++++ /dev/null
+@@ -1,12 +0,0 @@
+-import { ListGroupItemHeading } from '..';
+-import { testForChildrenInComponent, testForDefaultClass } from '../testUtils';
+-
+-describe('ListGroupItem', () => {
+-  it('should render children', () => {
+-    testForChildrenInComponent(ListGroupItemHeading);
+-  });
+-
+-  it('should render with "list-group-item-heading" class', () => {
+-    testForDefaultClass(ListGroupItemHeading, 'list-group-item-heading');
+-  });
+-});
+diff --git a/node_modules/reactstrap/src/__tests__/ListGroupItemText.spec.js b/node_modules/reactstrap/src/__tests__/ListGroupItemText.spec.js
+deleted file mode 100644
+index a17f838..0000000
+--- a/node_modules/reactstrap/src/__tests__/ListGroupItemText.spec.js
++++ /dev/null
+@@ -1,16 +0,0 @@
+-import { ListGroupItemText } from '..';
+-import {
+-  testForChildrenInComponent,
+-  testForCustomClass,
+-  testForDefaultClass,
+-} from '../testUtils';
+-
+-describe('ListGroupItem', () => {
+-  it('should render children', () => {
+-    testForChildrenInComponent(ListGroupItemText);
+-  });
+-
+-  it('should render with "list-group-item-text" class', () => {
+-    testForDefaultClass(ListGroupItemText, 'list-group-item-text');
+-  });
+-});
+diff --git a/node_modules/reactstrap/src/__tests__/ListInlineItem.spec.js b/node_modules/reactstrap/src/__tests__/ListInlineItem.spec.js
+deleted file mode 100644
+index cfa080f..0000000
+--- a/node_modules/reactstrap/src/__tests__/ListInlineItem.spec.js
++++ /dev/null
+@@ -1,25 +0,0 @@
+-import { ListInlineItem } from '..';
+-import {
+-  testForChildrenInComponent,
+-  testForCustomClass,
+-  testForCustomTag,
+-  testForDefaultClass,
+-} from '../testUtils';
+-
+-describe('ListInlineItem', () => {
+-  it('should render children', () => {
+-    testForChildrenInComponent(ListInlineItem);
+-  });
+-
+-  it('should render with "list-inline-item" class', () => {
+-    testForDefaultClass(ListInlineItem, 'list-inline-item');
+-  });
+-
+-  it('should render additional classes', () => {
+-    testForCustomClass(ListInlineItem);
+-  });
+-
+-  it('should render custom tag', () => {
+-    testForCustomTag(ListInlineItem);
+-  });
+-});
+diff --git a/node_modules/reactstrap/types/index.d.ts b/node_modules/reactstrap/types/index.d.ts
+index 769fc0a..b2dd814 100644
+--- a/node_modules/reactstrap/types/index.d.ts
++++ b/node_modules/reactstrap/types/index.d.ts
+@@ -94,18 +94,6 @@ export { default as InputGroupText } from './lib/InputGroupText';
+ export { InputGroupTextProps } from './lib/InputGroupText';
+ export { default as Label } from './lib/Label';
+ export { LabelProps } from './lib/Label';
+-export { default as ListGroup } from './lib/ListGroup';
+-export { ListGroupProps } from './lib/ListGroup';
+-export { default as ListGroupItem } from './lib/ListGroupItem';
+-export { ListGroupItemProps } from './lib/ListGroupItem';
+-export { default as ListGroupItemHeading } from './lib/ListGroupItemHeading';
+-export { ListGroupItemHeadingProps } from './lib/ListGroupItemHeading';
+-export { default as ListGroupItemText } from './lib/ListGroupItemText';
+-export { ListGroupItemTextProps } from './lib/ListGroupItemText';
+-export { default as List } from './lib/List';
+-export { ListProps } from './lib/List';
+-export { default as ListInlineItem } from './lib/ListInlineItem';
+-export { ListInlineItemProps } from './lib/ListInlineItem';
+ export { default as Media } from './lib/Media';
+ export { MediaProps } from './lib/Media';
+ export { default as Modal } from './lib/Modal';
+diff --git a/node_modules/reactstrap/types/lib/List.d.ts b/node_modules/reactstrap/types/lib/List.d.ts
+deleted file mode 100644
+index 6a6e21e..0000000
+--- a/node_modules/reactstrap/types/lib/List.d.ts
++++ /dev/null
+@@ -1,12 +0,0 @@
+-import * as React from 'react';
+-import { CSSModule } from './utils';
+-
+-export interface ListProps extends React.HTMLAttributes<HTMLElement> {
+-  [key: string]: any;
+-  tag?: React.ElementType;
+-  cssModule?: CSSModule;
+-  type?: string;
+-}
+-
+-declare class List extends React.Component<ListProps> {}
+-export default List;
+diff --git a/node_modules/reactstrap/types/lib/ListGroup.d.ts b/node_modules/reactstrap/types/lib/ListGroup.d.ts
+deleted file mode 100644
+index 06b461f..0000000
+--- a/node_modules/reactstrap/types/lib/ListGroup.d.ts
++++ /dev/null
+@@ -1,14 +0,0 @@
+-import * as React from 'react';
+-import { CSSModule } from './utils';
+-
+-export interface ListGroupProps extends React.HTMLAttributes<HTMLElement> {
+-  [key: string]: any;
+-  tag?: React.ElementType;
+-  flush?: boolean;
+-  horizontal?: boolean | string;
+-  numbered?: boolean;
+-  cssModule?: CSSModule;
+-}
+-
+-declare class ListGroup extends React.Component<ListGroupProps> {}
+-export default ListGroup;
+diff --git a/node_modules/reactstrap/types/lib/ListGroupItem.d.ts b/node_modules/reactstrap/types/lib/ListGroupItem.d.ts
+deleted file mode 100644
+index a6097c6..0000000
+--- a/node_modules/reactstrap/types/lib/ListGroupItem.d.ts
++++ /dev/null
+@@ -1,16 +0,0 @@
+-import * as React from 'react';
+-import { CSSModule } from './utils';
+-
+-export interface ListGroupItemProps extends React.HTMLAttributes<HTMLElement> {
+-  [key: string]: any;
+-  tag?: React.ElementType;
+-  active?: boolean;
+-  disabled?: boolean;
+-  color?: string;
+-  action?: boolean;
+-  cssModule?: CSSModule;
+-  href?: string;
+-}
+-
+-declare class ListGroupItem extends React.Component<ListGroupItemProps> {}
+-export default ListGroupItem;
+diff --git a/node_modules/reactstrap/types/lib/ListGroupItemHeading.d.ts b/node_modules/reactstrap/types/lib/ListGroupItemHeading.d.ts
+deleted file mode 100644
+index 41f6842..0000000
+--- a/node_modules/reactstrap/types/lib/ListGroupItemHeading.d.ts
++++ /dev/null
+@@ -1,14 +0,0 @@
+-import * as React from 'react';
+-import { CSSModule } from './utils';
+-
+-export interface ListGroupItemHeadingProps
+-  extends React.HTMLAttributes<HTMLElement> {
+-  [key: string]: any;
+-  tag?: React.ElementType;
+-  cssModule?: CSSModule;
+-}
+-
+-declare class ListGroupItemHeading extends React.Component<
+-  ListGroupItemHeadingProps
+-> {}
+-export default ListGroupItemHeading;
+diff --git a/node_modules/reactstrap/types/lib/ListGroupItemText.d.ts b/node_modules/reactstrap/types/lib/ListGroupItemText.d.ts
+deleted file mode 100644
+index 546b683..0000000
+--- a/node_modules/reactstrap/types/lib/ListGroupItemText.d.ts
++++ /dev/null
+@@ -1,14 +0,0 @@
+-import * as React from 'react';
+-import { CSSModule } from './utils';
+-
+-export interface ListGroupItemTextProps
+-  extends React.HTMLAttributes<HTMLElement> {
+-  [key: string]: any;
+-  tag?: React.ElementType;
+-  cssModule?: CSSModule;
+-}
+-
+-declare class ListGroupItemText extends React.Component<
+-  ListGroupItemTextProps
+-> {}
+-export default ListGroupItemText;
+diff --git a/node_modules/reactstrap/types/lib/ListInlineItem.d.ts b/node_modules/reactstrap/types/lib/ListInlineItem.d.ts
+deleted file mode 100644
+index e1d3804..0000000
+--- a/node_modules/reactstrap/types/lib/ListInlineItem.d.ts
++++ /dev/null
+@@ -1,11 +0,0 @@
+-import * as React from 'react';
+-import { CSSModule } from './utils';
+-
+-export interface ListInlineItemProps extends React.HTMLAttributes<HTMLElement> {
+-  [key: string]: any;
+-  tag?: React.ElementType;
+-  cssModule?: CSSModule;
+-}
+-
+-declare class ListInlineItem extends React.Component<ListInlineItemProps> {}
+-export default ListInlineItem;
+diff --git a/node_modules/reactstrap/types/reactstrap-tests.tsx b/node_modules/reactstrap/types/reactstrap-tests.tsx
+index 4461f4d..a8a76a9 100644
+--- a/node_modules/reactstrap/types/reactstrap-tests.tsx
++++ b/node_modules/reactstrap/types/reactstrap-tests.tsx
+@@ -46,12 +46,6 @@ import {
+   InputGroupText,
+   Pagination,
+   Label,
+-  ListGroup,
+-  ListGroupItem,
+-  ListGroupItemHeading,
+-  ListGroupItemText,
+-  List,
+-  ListInlineItem,
+   ModalFooter,
+   Modal,
+   ModalBody,
+@@ -2178,233 +2172,6 @@ const ExampleRowColumns = (props: any) => {
+   );
+ };
+ 
+-class Example62 extends React.Component {
+-  render() {
+-    return (
+-      <ListGroup>
+-        <ListGroupItem>Cras justo odio</ListGroupItem>
+-        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
+-        <ListGroupItem>Morbi leo risus</ListGroupItem>
+-        <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
+-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
+-      </ListGroup>
+-    );
+-  }
+-}
+-
+-class Example63 extends React.Component {
+-  render() {
+-    return (
+-      <ListGroup>
+-        <ListGroupItem className="justify-content-between">
+-          Cras justo odio <Badge pill>14</Badge>
+-        </ListGroupItem>
+-        <ListGroupItem className="justify-content-between">
+-          Dapibus ac facilisis in <Badge pill>2</Badge>
+-        </ListGroupItem>
+-        <ListGroupItem className="justify-content-between">
+-          Morbi leo risus <Badge pill>1</Badge>
+-        </ListGroupItem>
+-      </ListGroup>
+-    );
+-  }
+-}
+-
+-class Example64 extends React.Component {
+-  render() {
+-    return (
+-      <ListGroup>
+-        <ListGroupItem disabled tag="a" href="#">
+-          Cras justo odio
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Dapibus ac facilisis in
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Morbi leo risus
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Porta ac consectetur ac
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Vestibulum at eros
+-        </ListGroupItem>
+-      </ListGroup>
+-    );
+-  }
+-}
+-
+-class Example65 extends React.Component {
+-  render() {
+-    return (
+-      <div>
+-        <h3>Anchors </h3>
+-        <p>
+-          Be sure to{' '}
+-          <strong>
+-            not use the standard <code>.btn</code> classes here
+-          </strong>
+-          .
+-        </p>
+-        <ListGroup>
+-          <ListGroupItem active tag="a" href="#" action>
+-            Cras justo odio
+-          </ListGroupItem>
+-          <ListGroupItem tag="a" href="#" action>
+-            Dapibus ac facilisis in
+-          </ListGroupItem>
+-          <ListGroupItem tag="a" href="#" action>
+-            Morbi leo risus
+-          </ListGroupItem>
+-          <ListGroupItem tag="a" href="#" action>
+-            Porta ac consectetur ac
+-          </ListGroupItem>
+-          <ListGroupItem disabled tag="a" href="#" action>
+-            Vestibulum at eros
+-          </ListGroupItem>
+-        </ListGroup>
+-        <p />
+-        <h3>Buttons </h3>
+-        <ListGroup>
+-          <ListGroupItem active tag="button" action>
+-            Cras justo odio
+-          </ListGroupItem>
+-          <ListGroupItem tag="button" action>
+-            Dapibus ac facilisis in
+-          </ListGroupItem>
+-          <ListGroupItem tag="button" action>
+-            Morbi leo risus
+-          </ListGroupItem>
+-          <ListGroupItem tag="button" action>
+-            Porta ac consectetur ac
+-          </ListGroupItem>
+-          <ListGroupItem disabled tag="button" action>
+-            Vestibulum at eros
+-          </ListGroupItem>
+-        </ListGroup>
+-      </div>
+-    );
+-  }
+-}
+-
+-class Example66 extends React.Component {
+-  render() {
+-    return (
+-      <ListGroup>
+-        <ListGroupItem color="success">Cras justo odio</ListGroupItem>
+-        <ListGroupItem color="info">Dapibus ac facilisis in</ListGroupItem>
+-        <ListGroupItem color="warning">Morbi leo risus</ListGroupItem>
+-        <ListGroupItem color="danger">Porta ac consectetur ac</ListGroupItem>
+-      </ListGroup>
+-    );
+-  }
+-}
+-
+-class Example67 extends React.Component {
+-  render() {
+-    return (
+-      <ListGroup>
+-        <ListGroupItem active>
+-          <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
+-          <ListGroupItemText>
+-            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
+-            eget risus varius blandit.
+-          </ListGroupItemText>
+-        </ListGroupItem>
+-        <ListGroupItem>
+-          <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
+-          <ListGroupItemText>
+-            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
+-            eget risus varius blandit.
+-          </ListGroupItemText>
+-        </ListGroupItem>
+-        <ListGroupItem>
+-          <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
+-          <ListGroupItemText>
+-            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
+-            eget risus varius blandit.
+-          </ListGroupItemText>
+-        </ListGroupItem>
+-      </ListGroup>
+-    );
+-  }
+-}
+-
+-const ExampleListGroupFlush = (props: any) => {
+-  return (
+-    <ListGroup flush>
+-      <ListGroupItem disabled tag="a" href="#">
+-        Cras justo odio
+-      </ListGroupItem>
+-      <ListGroupItem tag="a" href="#">
+-        Dapibus ac facilisis in
+-      </ListGroupItem>
+-      <ListGroupItem tag="a" href="#">
+-        Morbi leo risus
+-      </ListGroupItem>
+-      <ListGroupItem tag="a" href="#">
+-        Porta ac consectetur ac
+-      </ListGroupItem>
+-      <ListGroupItem tag="a" href="#">
+-        Vestibulum at eros
+-      </ListGroupItem>
+-    </ListGroup>
+-  );
+-};
+-
+-const ExampleListGroupHorizontal = (props: any) => {
+-  return (
+-    <div>
+-      <p>
+-        The <code>horizontal</code> prop can be a Boolean or a string specifying
+-        one of Bootstrap's breakpoints
+-      </p>
+-      <ListGroup horizontal>
+-        <ListGroupItem tag="a" href="#">
+-          Cras justo odio
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Dapibus ac facilisis in
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Morbi leo risus
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Porta ac consectetur ac
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Vestibulum at eros
+-        </ListGroupItem>
+-      </ListGroup>
+-      <p className="mt-3">
+-        This list group is horizontal at the <code>lg</code> breakpoint and up.
+-      </p>
+-      <ListGroup horizontal="lg">
+-        <ListGroupItem tag="a" href="#">
+-          Cras justo odio
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Dapibus ac facilisis in
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Morbi leo risus
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Porta ac consectetur ac
+-        </ListGroupItem>
+-        <ListGroupItem tag="a" href="#">
+-          Vestibulum at eros
+-        </ListGroupItem>
+-      </ListGroup>
+-      <p className="mt-3">
+-        Note that horizontal list groups cannot be combined with flush list
+-        groups. If <code>flush</code> is <code>true</code> then{' '}
+-        <code>horizontal</code> has no effect.
+-      </p>
+-    </div>
+-  );
+-};
+-
+ // ------------- Media
+ const Example68 = () => {
+   return (
+@@ -4798,10 +4565,6 @@ import { default as Input_ } from './lib/Input'; /* tslint:disable-line: no-rela
+ import { default as InputGroup_ } from './lib/InputGroup'; /* tslint:disable-line: no-relative-import-in-test */
+ import { default as InputGroupText_ } from './lib/InputGroupText'; /* tslint:disable-line: no-relative-import-in-test */
+ import { default as Label_ } from './lib/Label'; /* tslint:disable-line: no-relative-import-in-test */
+-import { default as ListGroup_ } from './lib/ListGroup'; /* tslint:disable-line: no-relative-import-in-test */
+-import { default as ListGroupItem_ } from './lib/ListGroupItem'; /* tslint:disable-line: no-relative-import-in-test */
+-import { default as ListGroupItemHeading_ } from './lib/ListGroupItemHeading'; /* tslint:disable-line: no-relative-import-in-test */
+-import { default as ListGroupItemText_ } from './lib/ListGroupItemText'; /* tslint:disable-line: no-relative-import-in-test */
+ import { default as Media_ } from './lib/Media'; /* tslint:disable-line: no-relative-import-in-test */
+ import { default as Modal_ } from './lib/Modal'; /* tslint:disable-line: no-relative-import-in-test */
+ import { default as ModalBody_ } from './lib/ModalBody'; /* tslint:disable-line: no-relative-import-in-test */
+@@ -4897,10 +4660,6 @@ function AnyPropExample() {
+       <InputGroup_ foo={1} bar={false} foobar="example" />
+       <InputGroupText_ foo={1} bar={false} foobar="example" />
+       <Label_ foo={1} bar={false} foobar="example" />
+-      <ListGroup_ foo={1} bar={false} foobar="example" />
+-      <ListGroupItem_ foo={1} bar={false} foobar="example" />
+-      <ListGroupItemHeading_ foo={1} bar={false} foobar="example" />
+-      <ListGroupItemText_ foo={1} bar={false} foobar="example" />
+       <Media_ foo={1} bar={false} foobar="example" />
+       <Modal_ foo={1} bar={false} foobar="example" />
+       <ModalBody_ foo={1} bar={false} foobar="example" />
+@@ -5421,16 +5180,6 @@ const MegaTest = () => {
+       <InputGroup ref={React.createRef<InputGroup>()} {...htmlProps} />
+       <InputGroupText ref={React.createRef<InputGroupText>()} {...htmlProps} />
+       <Label ref={React.createRef<Label>()} {...htmlProps} />
+-      <ListGroup ref={React.createRef<ListGroup>()} {...htmlProps} />
+-      <ListGroupItem ref={React.createRef<ListGroupItem>()} {...htmlProps} />
+-      <ListGroupItemHeading
+-        ref={React.createRef<ListGroupItemHeading>()}
+-        {...htmlProps}
+-      />
+-      <ListGroupItemText
+-        ref={React.createRef<ListGroupItemText>()}
+-        {...htmlProps}
+-      />
+       <Media ref={React.createRef<Media>()} {...htmlProps} />
+       <Modal ref={React.createRef<Modal>()} {...htmlProps} />
+       <ModalBody ref={React.createRef<ModalBody>()} {...htmlProps} />

@@ -1,0 +1,598 @@
+[
+    {
+        "value": "651 - Smoke scare, odor of smoke",
+        "label": "651 - Smoke scare, odor of smoke"
+    },
+    {
+        "value": "5001 - Cable / Telephone Wires Down",
+        "label": "5001 - Cable / Telephone Wires Down"
+    },
+    {
+        "value": "710 - Malicious, mischievous false call, other",
+        "label": "710 - Malicious, mischievous false call, other"
+    },
+    {
+        "value": "300 - Rescue, EMS incident, other",
+        "label": "300 - Rescue, EMS incident, other"
+    },
+    {
+        "value": "4001 - Tree/branch removal or cutting",
+        "label": "4001 - Tree/branch removal or cutting"
+    },
+    {
+        "value": "412 - Gas leak (natural gas or LPG)",
+        "label": "412 - Gas leak (natural gas or LPG)"
+    },
+    {
+        "value": "353S - Stalled occupied elevator-removal via hoistway door",
+        "label": "353S - Stalled occupied elevator-removal via hoistway door"
+    },
+    {
+        "value": "424 - Carbon monoxide incident",
+        "label": "424 - Carbon monoxide incident"
+    },
+    {
+        "value": "735A - Unwarranted alarm/defective condition of alarm system",
+        "label": "735A - Unwarranted alarm/defective condition of alarm system"
+    },
+    {
+        "value": "511 - Lock-out",
+        "label": "511 - Lock-out"
+    },
+    {
+        "value": "522 - Water or steam leak",
+        "label": "522 - Water or steam leak"
+    },
+    {
+        "value": "322 - Motor vehicle accident with injuries",
+        "label": "322 - Motor vehicle accident with injuries"
+    },
+    {
+        "value": "116 - Fuel burner/boiler malfunction, fire confined",
+        "label": "116 - Fuel burner/boiler malfunction, fire confined"
+    },
+    {
+        "value": "745A - Unnecessary alarm/ordinary household activities",
+        "label": "745A - Unnecessary alarm/ordinary household activities"
+    },
+    {
+        "value": "736 - CO detector activation due to malfunction",
+        "label": "736 - CO detector activation due to malfunction"
+    },
+    {
+        "value": "746 - Carbon monoxide detector activation, no CO",
+        "label": "746 - Carbon monoxide detector activation, no CO"
+    },
+    {
+        "value": "331 - Lock-in (if lock out , use 511 )",
+        "label": "331 - Lock-in (if lock out , use 511 )"
+    },
+    {
+        "value": "353 - Removal of victim(s) from stalled elevator",
+        "label": "353 - Removal of victim(s) from stalled elevator"
+    },
+    {
+        "value": "550 - Public service assistance, other",
+        "label": "550 - Public service assistance, other"
+    },
+    {
+        "value": "554 - Assist invalid",
+        "label": "554 - Assist invalid"
+    },
+    {
+        "value": "131 - Passenger vehicle fire",
+        "label": "131 - Passenger vehicle fire"
+    },
+    {
+        "value": "113 - Cooking fire, confined to container",
+        "label": "113 - Cooking fire, confined to container"
+    },
+    {
+        "value": "600 - Good intent call, other",
+        "label": "600 - Good intent call, other"
+    },
+    {
+        "value": "740A - Unnecessary alarm/construction activities",
+        "label": "740A - Unnecessary alarm/construction activities"
+    },
+    {
+        "value": "117 - Commercial Compactor fire, confined to rubbish",
+        "label": "117 - Commercial Compactor fire, confined to rubbish"
+    },
+    {
+        "value": "740B - Unnecessary alarm/other known cause",
+        "label": "740B - Unnecessary alarm/other known cause"
+    },
+    {
+        "value": "353T - Stalled occupied elevator-removal via top hatch",
+        "label": "353T - Stalled occupied elevator-removal via top hatch"
+    },
+    {
+        "value": "445 - Arcing, shorted electrical equipment",
+        "label": "445 - Arcing, shorted electrical equipment"
+    },
+    {
+        "value": "151 - Outside rubbish, trash or waste fire",
+        "label": "151 - Outside rubbish, trash or waste fire"
+    },
+    {
+        "value": "323 - Motor vehicle/pedestrian accident (MV Ped)",
+        "label": "323 - Motor vehicle/pedestrian accident (MV Ped)"
+    },
+    {
+        "value": "735B - Unnecessary alarm/alarm system testing or servicing",
+        "label": "735B - Unnecessary alarm/alarm system testing or servicing"
+    },
+    {
+        "value": "311 - Medical assist, assist EMS crew",
+        "label": "311 - Medical assist, assist EMS crew"
+    },
+    {
+        "value": "411 - Gasoline or other flammable liquid spill",
+        "label": "411 - Gasoline or other flammable liquid spill"
+    },
+    {
+        "value": "555 - Defective elevator, no occupants",
+        "label": "555 - Defective elevator, no occupants"
+    },
+    {
+        "value": "611 - Dispatched & canceled en route",
+        "label": "611 - Dispatched & canceled en route"
+    },
+    {
+        "value": "553 - Public service",
+        "label": "553 - Public service"
+    },
+    {
+        "value": "500 - Service Call, other",
+        "label": "500 - Service Call, other"
+    },
+    {
+        "value": "400 - Hazardous condition, other",
+        "label": "400 - Hazardous condition, other"
+    },
+    {
+        "value": "731 - Sprinkler activation due to malfunction",
+        "label": "731 - Sprinkler activation due to malfunction"
+    },
+    {
+        "value": "142 - Brush or brush-and-grass mixture fire",
+        "label": "142 - Brush or brush-and-grass mixture fire"
+    },
+    {
+        "value": "520 - Water problem, other",
+        "label": "520 - Water problem, other"
+    },
+    {
+        "value": "444 - Power line down",
+        "label": "444 - Power line down"
+    },
+    {
+        "value": "440 - Electrical  wiring/equipment problem, other",
+        "label": "440 - Electrical  wiring/equipment problem, other"
+    },
+    {
+        "value": "413 - Oil or other combustible liquid spill",
+        "label": "413 - Oil or other combustible liquid spill"
+    },
+    {
+        "value": "512 - Ring or jewelry removal",
+        "label": "512 - Ring or jewelry removal"
+    },
+    {
+        "value": "622 - No incident found on arrival at dispatch address",
+        "label": "622 - No incident found on arrival at dispatch address"
+    },
+    {
+        "value": "732 - Extinguishing system activation due to malfunction",
+        "label": "732 - Extinguishing system activation due to malfunction"
+    },
+    {
+        "value": "4401 - Compact Fluorescent Bulb",
+        "label": "4401 - Compact Fluorescent Bulb"
+    },
+    {
+        "value": "800 - Severe weather or natural disaster, other",
+        "label": "800 - Severe weather or natural disaster, other"
+    },
+    {
+        "value": "324 - Motor vehicle accident with no injuries.",
+        "label": "324 - Motor vehicle accident with no injuries."
+    },
+    {
+        "value": "118 - Trash or rubbish fire, contained",
+        "label": "118 - Trash or rubbish fire, contained"
+    },
+    {
+        "value": "321 - EMS call, excluding vehicle accident with injury",
+        "label": "321 - EMS call, excluding vehicle accident with injury"
+    },
+    {
+        "value": "324A - Vehicle accident with no washdown and no injuries",
+        "label": "324A - Vehicle accident with no washdown and no injuries"
+    },
+    {
+        "value": "200A - Blown manhole cover, no ensuing fire",
+        "label": "200A - Blown manhole cover, no ensuing fire"
+    },
+    {
+        "value": "132 - Road freight or transport vehicle fire",
+        "label": "132 - Road freight or transport vehicle fire"
+    },
+    {
+        "value": "150 - Outside rubbish fire, other",
+        "label": "150 - Outside rubbish fire, other"
+    },
+    {
+        "value": "742 - Extinguishing system activation",
+        "label": "742 - Extinguishing system activation"
+    },
+    {
+        "value": "352 - Extrication of victim(s) from vehicle",
+        "label": "352 - Extrication of victim(s) from vehicle"
+    },
+    {
+        "value": "510 - Person in distress, other",
+        "label": "510 - Person in distress, other"
+    },
+    {
+        "value": "200 - Overpressure rupture, explosion, overheat other",
+        "label": "200 - Overpressure rupture, explosion, overheat other"
+    },
+    {
+        "value": "4003 - No Detector Activation Carbon Monoxide Incident or Emergency",
+        "label": "4003 - No Detector Activation Carbon Monoxide Incident or Emergency"
+    },
+    {
+        "value": "652 - Steam, vapor, fog or dust thought to be smoke",
+        "label": "652 - Steam, vapor, fog or dust thought to be smoke"
+    },
+    {
+        "value": "621 - Wrong location",
+        "label": "621 - Wrong location"
+    },
+    {
+        "value": "462 - Aircraft standby",
+        "label": "462 - Aircraft standby"
+    },
+    {
+        "value": "112 - Fires in structure other than in a building",
+        "label": "112 - Fires in structure other than in a building"
+    },
+    {
+        "value": "730 - System malfunction, other",
+        "label": "730 - System malfunction, other"
+    },
+    {
+        "value": "4002 - Explosive Escort",
+        "label": "4002 - Explosive Escort"
+    },
+    {
+        "value": "744 - Detector activation, no fire - unintentional",
+        "label": "744 - Detector activation, no fire - unintentional"
+    },
+    {
+        "value": "353U - Stalled occupied elevator in blind shaft-removal via top hatch",
+        "label": "353U - Stalled occupied elevator in blind shaft-removal via top hatch"
+    },
+    {
+        "value": "551 - Assist police or other governmental agency",
+        "label": "551 - Assist police or other governmental agency"
+    },
+    {
+        "value": "365 - Watercraft rescue",
+        "label": "365 - Watercraft rescue"
+    },
+    {
+        "value": "741 - Sprinkler activation, no fire - unintentional",
+        "label": "741 - Sprinkler activation, no fire - unintentional"
+    },
+    {
+        "value": "552 - Police matter",
+        "label": "552 - Police matter"
+    },
+    {
+        "value": "700 - False alarm or false call, other",
+        "label": "700 - False alarm or false call, other"
+    },
+    {
+        "value": "350 - Extrication, rescue, other",
+        "label": "350 - Extrication, rescue, other"
+    },
+    {
+        "value": "463 - Vehicle accident, general cleanup",
+        "label": "463 - Vehicle accident, general cleanup"
+    },
+    {
+        "value": "460 - Accident, potential accident, other",
+        "label": "460 - Accident, potential accident, other"
+    },
+    {
+        "value": "521 - Water evacuation",
+        "label": "521 - Water evacuation"
+    },
+    {
+        "value": "138 - Off-road vehicle or heavy equipment fire",
+        "label": "138 - Off-road vehicle or heavy equipment fire"
+    },
+    {
+        "value": "340 - Search for lost person, other",
+        "label": "340 - Search for lost person, other"
+    },
+    {
+        "value": "442 - Overheated motor",
+        "label": "442 - Overheated motor"
+    },
+    {
+        "value": "743 - Smoke detector activation, no fire - unintentional",
+        "label": "743 - Smoke detector activation, no fire - unintentional"
+    },
+    {
+        "value": "812 - Flood assessment",
+        "label": "812 - Flood assessment"
+    },
+    {
+        "value": "360 - Water & ice-related rescue, other",
+        "label": "360 - Water & ice-related rescue, other"
+    },
+    {
+        "value": "471 - Explosive, bomb removal (for bomb scare, use 721)",
+        "label": "471 - Explosive, bomb removal (for bomb scare, use 721)"
+    },
+    {
+        "value": "130 - Mobile property (vehicle) fire, other",
+        "label": "130 - Mobile property (vehicle) fire, other"
+    },
+    {
+        "value": "410 - Combustible/flammable gas/liquid condition, other",
+        "label": "410 - Combustible/flammable gas/liquid condition, other"
+    },
+    {
+        "value": "381 - Rescue or EMS standby",
+        "label": "381 - Rescue or EMS standby"
+    },
+    {
+        "value": "650 - Steam, other gas mistaken for smoke, other",
+        "label": "650 - Steam, other gas mistaken for smoke, other"
+    },
+    {
+        "value": "531 - Smoke or odor removal",
+        "label": "531 - Smoke or odor removal"
+    },
+    {
+        "value": "721 - Bomb scare - no bomb",
+        "label": "721 - Bomb scare - no bomb"
+    },
+    {
+        "value": "240 - Explosion (no fire), other",
+        "label": "240 - Explosion (no fire), other"
+    },
+    {
+        "value": "342 - Search for person in water",
+        "label": "342 - Search for person in water"
+    },
+    {
+        "value": "461 - Building or structure weakened or collapsed",
+        "label": "461 - Building or structure weakened or collapsed"
+    },
+    {
+        "value": "715 - Local alarm system, malicious false alarm",
+        "label": "715 - Local alarm system, malicious false alarm"
+    },
+    {
+        "value": "561 - Unauthorized burning",
+        "label": "561 - Unauthorized burning"
+    },
+    {
+        "value": "4004 - Scaffold Incident",
+        "label": "4004 - Scaffold Incident"
+    },
+    {
+        "value": "100 - Fire, other",
+        "label": "100 - Fire, other"
+    },
+    {
+        "value": "361 - Swimming/recreational water areas rescue",
+        "label": "361 - Swimming/recreational water areas rescue"
+    },
+    {
+        "value": "420 - Toxic condition, other",
+        "label": "420 - Toxic condition, other"
+    },
+    {
+        "value": "351 - Extrication of victim(s) from building/structure",
+        "label": "351 - Extrication of victim(s) from building/structure"
+    },
+    {
+        "value": "813 - Wind storm, tornado/hurricane assessment",
+        "label": "813 - Wind storm, tornado/hurricane assessment"
+    },
+    {
+        "value": "370 - Electrical rescue, other",
+        "label": "370 - Electrical rescue, other"
+    },
+    {
+        "value": "542 - Animal rescue",
+        "label": "542 - Animal rescue"
+    },
+    {
+        "value": "341 - Search for person on land",
+        "label": "341 - Search for person on land"
+    },
+    {
+        "value": "251 - Excessive heat, scorch burns with no ignition",
+        "label": "251 - Excessive heat, scorch burns with no ignition"
+    },
+    {
+        "value": "155 - Outside stationary compactor/compacted trash fire",
+        "label": "155 - Outside stationary compactor/compacted trash fire"
+    },
+    {
+        "value": "661 - EMS call, party transported by non-fire agency",
+        "label": "661 - EMS call, party transported by non-fire agency"
+    },
+    {
+        "value": "423 - Refrigeration leak",
+        "label": "423 - Refrigeration leak"
+    },
+    {
+        "value": "671 - HazMat release investigation w/no HazMat",
+        "label": "671 - HazMat release investigation w/no HazMat"
+    },
+    {
+        "value": "653 - Smoke from barbecue, tar kettle",
+        "label": "653 - Smoke from barbecue, tar kettle"
+    },
+    {
+        "value": "141 - Forest, woods or wildland fire",
+        "label": "141 - Forest, woods or wildland fire"
+    },
+    {
+        "value": "222 - Overpressure rupture of boiler from air or gas",
+        "label": "222 - Overpressure rupture of boiler from air or gas"
+    },
+    {
+        "value": "441 - Heat from short circuit (wiring), defective/worn",
+        "label": "441 - Heat from short circuit (wiring), defective/worn"
+    },
+    {
+        "value": "733 - Smoke detector activation due to malfunction",
+        "label": "733 - Smoke detector activation due to malfunction"
+    },
+    {
+        "value": "641 - Vicinity alarm (incident in other location)",
+        "label": "641 - Vicinity alarm (incident in other location)"
+    },
+    {
+        "value": "243 - Fireworks explosion (no fire)",
+        "label": "243 - Fireworks explosion (no fire)"
+    },
+    {
+        "value": "371 - Electrocution or potential electrocution",
+        "label": "371 - Electrocution or potential electrocution"
+    },
+    {
+        "value": "114 - Chimney or flue fire, confined to chimney or flue",
+        "label": "114 - Chimney or flue fire, confined to chimney or flue"
+    },
+    {
+        "value": "711 - Municipal alarm system, malicious false alarm",
+        "label": "711 - Municipal alarm system, malicious false alarm"
+    },
+    {
+        "value": "422 - Chemical spill or leak",
+        "label": "422 - Chemical spill or leak"
+    },
+    {
+        "value": "421 - Chemical hazard (no spill or leak)",
+        "label": "421 - Chemical hazard (no spill or leak)"
+    },
+    {
+        "value": "714 - Central station, malicious false alarm",
+        "label": "714 - Central station, malicious false alarm"
+    },
+    {
+        "value": "164 - Outside mailbox fire",
+        "label": "164 - Outside mailbox fire"
+    },
+    {
+        "value": "211 - Overpressure rupture of steam pipe or pipeline",
+        "label": "211 - Overpressure rupture of steam pipe or pipeline"
+    },
+    {
+        "value": "443 - Breakdown of light ballast",
+        "label": "443 - Breakdown of light ballast"
+    },
+    {
+        "value": "154 - Dumpster or other outside trash receptacle fire",
+        "label": "154 - Dumpster or other outside trash receptacle fire"
+    },
+    {
+        "value": "160 - Special outside fire, other",
+        "label": "160 - Special outside fire, other"
+    },
+    {
+        "value": "357 - Extrication of victim(s) from machinery",
+        "label": "357 - Extrication of victim(s) from machinery"
+    },
+    {
+        "value": "631 - Authorized controlled burning",
+        "label": "631 - Authorized controlled burning"
+    },
+    {
+        "value": "140 - Natural vegetation fire, other",
+        "label": "140 - Natural vegetation fire, other"
+    },
+    {
+        "value": "115 - Incinerator overload or malfunction, fire confined",
+        "label": "115 - Incinerator overload or malfunction, fire confined"
+    },
+    {
+        "value": "713 - Telephone, malicious false alarm",
+        "label": "713 - Telephone, malicious false alarm"
+    },
+    {
+        "value": "712 - Direct tie to FD, malicious false alarm",
+        "label": "712 - Direct tie to FD, malicious false alarm"
+    },
+    {
+        "value": "210 - Overpressure rupture from steam, other",
+        "label": "210 - Overpressure rupture from steam, other"
+    },
+    {
+        "value": "353V - Stalled occupied elevator in blind shaft-removal via wall breach",
+        "label": "353V - Stalled occupied elevator in blind shaft-removal via wall breach"
+    },
+    {
+        "value": "162 - Outside equipment fire",
+        "label": "162 - Outside equipment fire"
+    },
+    {
+        "value": "480 - Attempted burning, illegal action, other",
+        "label": "480 - Attempted burning, illegal action, other"
+    },
+    {
+        "value": "540 - Animal problem, other",
+        "label": "540 - Animal problem, other"
+    },
+    {
+        "value": "364 - Surf rescue",
+        "label": "364 - Surf rescue"
+    },
+    {
+        "value": "356 - High-angle rescue",
+        "label": "356 - High-angle rescue"
+    },
+    {
+        "value": "213 - Steam rupture of pressure or process vessel",
+        "label": "213 - Steam rupture of pressure or process vessel"
+    },
+    {
+        "value": "220 - Overpressure rupture from air or gas, other",
+        "label": "220 - Overpressure rupture from air or gas, other"
+    },
+    {
+        "value": "111 - Building fire",
+        "label": "111 - Building fire"
+    },
+    {
+        "value": "343 - Search for person underground",
+        "label": "343 - Search for person underground"
+    },
+    {
+        "value": "571A - Relocation",
+        "label": "571A - Relocation"
+    },
+    {
+        "value": "482 - Threat to burn",
+        "label": "482 - Threat to burn"
+    },
+    {
+        "value": "672 - Biological hazard investigation, none found",
+        "label": "672 - Biological hazard investigation, none found"
+    },
+    {
+        "value": "355 - Confined space rescue",
+        "label": "355 - Confined space rescue"
+    }
+]

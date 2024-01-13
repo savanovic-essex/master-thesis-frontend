@@ -1,0 +1,622 @@
+[
+  {
+    "label": "000 - Property Use, other",
+    "value": "000 - Property Use, other"
+  },
+  {
+    "label": "100 - Assembly, other",
+    "value": "100 - Assembly, other"
+  },
+  {
+    "label": "110 - Fixed-use recreation places, other",
+    "value": "110 - Fixed-use recreation places, other"
+  },
+  {
+    "label": "111 - Bowling establishment",
+    "value": "111 - Bowling establishment"
+  },
+  {
+    "label": "112 - Billiard center, pool hall",
+    "value": "112 - Billiard center, pool hall"
+  },
+  {
+    "label": "113 - Electronic amusement center",
+    "value": "113 - Electronic amusement center"
+  },
+  {
+    "label": "114 - Ice rink: indoor, outdoor",
+    "value": "114 - Ice rink: indoor, outdoor"
+  },
+  {
+    "label": "115 - Roller rink: indoor or outdoor",
+    "value": "115 - Roller rink: indoor or outdoor"
+  },
+  {
+    "label": "116 - Swimming facility: indoor or outdoor",
+    "value": "116 - Swimming facility: indoor or outdoor"
+  },
+  {
+    "label": "120 - Variable-use amusement, recreation places, other",
+    "value": "120 - Variable-use amusement, recreation places, other"
+  },
+  {
+    "label": "121 - Ballroom, gymnasium",
+    "value": "121 - Ballroom, gymnasium"
+  },
+  {
+    "label": "122 - Convention center, exhibition hall",
+    "value": "122 - Convention center, exhibition hall"
+  },
+  {
+    "label": "123 - Stadium, arena",
+    "value": "123 - Stadium, arena"
+  },
+  {
+    "label": "124 - Playground",
+    "value": "124 - Playground"
+  },
+  {
+    "label": "129 - Amusement center: indoor/outdoor",
+    "value": "129 - Amusement center: indoor/outdoor"
+  },
+  {
+    "label": "130 - Places of worship, funeral parlors, other",
+    "value": "130 - Places of worship, funeral parlors, other"
+  },
+  {
+    "label": "131 - Church, mosque, synagogue, temple, chapel",
+    "value": "131 - Church, mosque, synagogue, temple, chapel"
+  },
+  {
+    "label": "134 - Funeral parlor",
+    "value": "134 - Funeral parlor"
+  },
+  {
+    "label": "140 - Clubs, other",
+    "value": "140 - Clubs, other"
+  },
+  {
+    "label": "141 - Athletic/health club",
+    "value": "141 - Athletic/health club"
+  },
+  {
+    "label": "142 - Clubhouse",
+    "value": "142 - Clubhouse"
+  },
+  {
+    "label": "143 - Yacht Club",
+    "value": "143 - Yacht Club"
+  },
+  {
+    "label": "144 - Casino, gambling clubs",
+    "value": "144 - Casino, gambling clubs"
+  },
+  {
+    "label": "150 - Public or government, other",
+    "value": "150 - Public or government, other"
+  },
+  {
+    "label": "151 - Library",
+    "value": "151 - Library"
+  },
+  {
+    "label": "152 - Museum",
+    "value": "152 - Museum"
+  },
+  {
+    "label": "154 - Memorial structure, including monuments & statues",
+    "value": "154 - Memorial structure, including monuments & statues"
+  },
+  {
+    "label": "155 - Courthouse",
+    "value": "155 - Courthouse"
+  },
+  {
+    "label": "160 - Eating, drinking places, other",
+    "value": "160 - Eating, drinking places, other"
+  },
+  {
+    "label": "161 - Restaurant or cafeteria",
+    "value": "161 - Restaurant or cafeteria"
+  },
+  {
+    "label": "162 - Bar or nightclub",
+    "value": "162 - Bar or nightclub"
+  },
+  {
+    "label": "170 - Passenger terminal, other",
+    "value": "170 - Passenger terminal, other"
+  },
+  {
+    "label": "171 - Airport passenger terminal",
+    "value": "171 - Airport passenger terminal"
+  },
+  {
+    "label": "173 - Bus station",
+    "value": "173 - Bus station"
+  },
+  {
+    "label": "174 - Rapid transit station",
+    "value": "174 - Rapid transit station"
+  },
+  {
+    "label": "180 - Studio/theater, other",
+    "value": "180 - Studio/theater, other"
+  },
+  {
+    "label": "181 - Live performance theater",
+    "value": "181 - Live performance theater"
+  },
+  {
+    "label": "182 - Auditorium, concert hall",
+    "value": "182 - Auditorium, concert hall"
+  },
+  {
+    "label": "183 - Movie theater",
+    "value": "183 - Movie theater"
+  },
+  {
+    "label": "185 - Radio, television studio",
+    "value": "185 - Radio, television studio"
+  },
+  {
+    "label": "186 - Film/movie production studio",
+    "value": "186 - Film/movie production studio"
+  },
+  {
+    "label": "200 - Educational, other",
+    "value": "200 - Educational, other"
+  },
+  {
+    "label": "210 - Schools, non-adult, other",
+    "value": "210 - Schools, non-adult, other"
+  },
+  {
+    "label": "211 - Preschool",
+    "value": "211 - Preschool"
+  },
+  {
+    "label": "213 - Elementary school, including kindergarten",
+    "value": "213 - Elementary school, including kindergarten"
+  },
+  {
+    "label": "215 - High school/junior high school/middle school",
+    "value": "215 - High school/junior high school/middle school"
+  },
+  {
+    "label": "241 - Adult education center, college classroom",
+    "value": "241 - Adult education center, college classroom"
+  },
+  {
+    "label": "250 - Day care, other (Conversion only)",
+    "value": "250 - Day care, other (Conversion only)"
+  },
+  {
+    "label": "254 - Day care, in commercial property",
+    "value": "254 - Day care, in commercial property"
+  },
+  {
+    "label": "255 - Day care, in residence, licensed",
+    "value": "255 - Day care, in residence, licensed"
+  },
+  {
+    "label": "256 - Day care in residence, unlicensed.",
+    "value": "256 - Day care in residence, unlicensed."
+  },
+  {
+    "label": "300 - Health care, detention, & correction, other",
+    "value": "300 - Health care, detention, & correction, other"
+  },
+  {
+    "label": "311 - 24-hour care Nursing homes, 4 or more persons",
+    "value": "311 - 24-hour care Nursing homes, 4 or more persons"
+  },
+  {
+    "label": "321 - Mental retardation/development disability facility",
+    "value": "321 - Mental retardation/development disability facility"
+  },
+  {
+    "label": "322 - Alcohol or substance abuse recovery center",
+    "value": "322 - Alcohol or substance abuse recovery center"
+  },
+  {
+    "label": "323 - Asylum, mental institution",
+    "value": "323 - Asylum, mental institution"
+  },
+  {
+    "label": "331 - Hospital - medical or psychiatric",
+    "value": "331 - Hospital - medical or psychiatric"
+  },
+  {
+    "label": "332 - Hospices",
+    "value": "332 - Hospices"
+  },
+  {
+    "label": "340 - Clinics, doctors offices, hemodialysis cntr, other",
+    "value": "340 - Clinics, doctors offices, hemodialysis cntr, other"
+  },
+  {
+    "label": "341 - Clinic, clinic-type infirmary",
+    "value": "341 - Clinic, clinic-type infirmary"
+  },
+  {
+    "label": "342 - Doctor, dentist or oral surgeon office",
+    "value": "342 - Doctor, dentist or oral surgeon office"
+  },
+  {
+    "label": "343 - Hemodialysis unit",
+    "value": "343 - Hemodialysis unit"
+  },
+  {
+    "label": "361 - Jail, prison (not juvenile)",
+    "value": "361 - Jail, prison (not juvenile)"
+  },
+  {
+    "label": "363 - Reformatory, juvenile detention center",
+    "value": "363 - Reformatory, juvenile detention center"
+  },
+  {
+    "label": "365 - Police station",
+    "value": "365 - Police station"
+  },
+  {
+    "label": "400 - Residential, other",
+    "value": "400 - Residential, other"
+  },
+  {
+    "label": "419 - 1 or 2 family dwelling",
+    "value": "419 - 1 or 2 family dwelling"
+  },
+  {
+    "label": "429 - Multifamily dwelling",
+    "value": "429 - Multifamily dwelling"
+  },
+  {
+    "label": "439 - Boarding/rooming house, residential hotels",
+    "value": "439 - Boarding/rooming house, residential hotels"
+  },
+  {
+    "label": "449 - Hotel/motel, commercial",
+    "value": "449 - Hotel/motel, commercial"
+  },
+  {
+    "label": "459 - Residential board and care",
+    "value": "459 - Residential board and care"
+  },
+  {
+    "label": "460 - Dormitory-type residence, other",
+    "value": "460 - Dormitory-type residence, other"
+  },
+  {
+    "label": "462 - Sorority house, fraternity house",
+    "value": "462 - Sorority house, fraternity house"
+  },
+  {
+    "label": "464 - Barracks, dormitory",
+    "value": "464 - Barracks, dormitory"
+  },
+  {
+    "label": "500 - Mercantile, business, other",
+    "value": "500 - Mercantile, business, other"
+  },
+  {
+    "label": "511 - Convenience store",
+    "value": "511 - Convenience store"
+  },
+  {
+    "label": "519 - Food and beverage sales, grocery store",
+    "value": "519 - Food and beverage sales, grocery store"
+  },
+  {
+    "label": "529 - Textile, wearing apparel sales",
+    "value": "529 - Textile, wearing apparel sales"
+  },
+  {
+    "label": "539 - Household goods, sales, repairs",
+    "value": "539 - Household goods, sales, repairs"
+  },
+  {
+    "label": "549 - Specialty shop",
+    "value": "549 - Specialty shop"
+  },
+  {
+    "label": "557 - Personal service, including barber & beauty shops",
+    "value": "557 - Personal service, including barber & beauty shops"
+  },
+  {
+    "label": "559 - Recreational, hobby, home repair sales, pet store",
+    "value": "559 - Recreational, hobby, home repair sales, pet store"
+  },
+  {
+    "label": "564 - Laundry, dry cleaning",
+    "value": "564 - Laundry, dry cleaning"
+  },
+  {
+    "label": "569 - Professional supplies, services",
+    "value": "569 - Professional supplies, services"
+  },
+  {
+    "label": "571 - Service station, gas station",
+    "value": "571 - Service station, gas station"
+  },
+  {
+    "label": "579 - Motor vehicle or boat sales, services, repair",
+    "value": "579 - Motor vehicle or boat sales, services, repair"
+  },
+  {
+    "label": "580 - General retail, other",
+    "value": "580 - General retail, other"
+  },
+  {
+    "label": "581 - Department or discount store",
+    "value": "581 - Department or discount store"
+  },
+  {
+    "label": "592 - Bank",
+    "value": "592 - Bank"
+  },
+  {
+    "label": "593 - Office:  veterinary or research",
+    "value": "593 - Office:  veterinary or research"
+  },
+  {
+    "label": "596 - Post office or mailing firms",
+    "value": "596 - Post office or mailing firms"
+  },
+  {
+    "label": "599 - Business office",
+    "value": "599 - Business office"
+  },
+  {
+    "label": "600 - Ind., utility, defense, agriculture, mining, other",
+    "value": "600 - Ind., utility, defense, agriculture, mining, other"
+  },
+  {
+    "label": "610 - Energy production plant, other",
+    "value": "610 - Energy production plant, other"
+  },
+  {
+    "label": "614 - Steam or heat-generating plant",
+    "value": "614 - Steam or heat-generating plant"
+  },
+  {
+    "label": "615 - Electric-generating plant",
+    "value": "615 - Electric-generating plant"
+  },
+  {
+    "label": "629 - Laboratory or science lababoratory",
+    "value": "629 - Laboratory or science lababoratory"
+  },
+  {
+    "label": "631 - Defense, military installation",
+    "value": "631 - Defense, military installation"
+  },
+  {
+    "label": "632 - Flight control tower",
+    "value": "632 - Flight control tower"
+  },
+  {
+    "label": "635 - Computer center",
+    "value": "635 - Computer center"
+  },
+  {
+    "label": "639 - Communications center",
+    "value": "639 - Communications center"
+  },
+  {
+    "label": "640 - Utility or Distribution system, other",
+    "value": "640 - Utility or Distribution system, other"
+  },
+  {
+    "label": "642 - Electrical distribution",
+    "value": "642 - Electrical distribution"
+  },
+  {
+    "label": "644 - Gas distribution, gas pipeline",
+    "value": "644 - Gas distribution, gas pipeline"
+  },
+  {
+    "label": "645 - Flammable liquid distribution, F.L. pipeline",
+    "value": "645 - Flammable liquid distribution, F.L. pipeline"
+  },
+  {
+    "label": "647 - Water utility",
+    "value": "647 - Water utility"
+  },
+  {
+    "label": "648 - Sanitation utility",
+    "value": "648 - Sanitation utility"
+  },
+  {
+    "label": "655 - Crops or orchard",
+    "value": "655 - Crops or orchard"
+  },
+  {
+    "label": "659 - Livestock production",
+    "value": "659 - Livestock production"
+  },
+  {
+    "label": "669 - Forest, timberland, woodland",
+    "value": "669 - Forest, timberland, woodland"
+  },
+  {
+    "label": "679 - Mine, quarry",
+    "value": "679 - Mine, quarry"
+  },
+  {
+    "label": "700 - Manufacturing, processing",
+    "value": "700 - Manufacturing, processing"
+  },
+  {
+    "label": "800 - Storage, other",
+    "value": "800 - Storage, other"
+  },
+  {
+    "label": "807 - Outside material storage area",
+    "value": "807 - Outside material storage area"
+  },
+  {
+    "label": "808 - Outbuilding or shed",
+    "value": "808 - Outbuilding or shed"
+  },
+  {
+    "label": "816 - Grain elevator, silo",
+    "value": "816 - Grain elevator, silo"
+  },
+  {
+    "label": "819 - Livestock, poultry storage",
+    "value": "819 - Livestock, poultry storage"
+  },
+  {
+    "label": "839 - Refrigerated storage",
+    "value": "839 - Refrigerated storage"
+  },
+  {
+    "label": "849 - Outside storage tank",
+    "value": "849 - Outside storage tank"
+  },
+  {
+    "label": "880 - Vehicle storage, other",
+    "value": "880 - Vehicle storage, other"
+  },
+  {
+    "label": "881 - Parking garage, (detached residential garage)",
+    "value": "881 - Parking garage, (detached residential garage)"
+  },
+  {
+    "label": "882 - Parking garage, general vehicle",
+    "value": "882 - Parking garage, general vehicle"
+  },
+  {
+    "label": "888 - Fire station",
+    "value": "888 - Fire station"
+  },
+  {
+    "label": "891 - Warehouse",
+    "value": "891 - Warehouse"
+  },
+  {
+    "label": "898 - Dock, marina, pier, wharf",
+    "value": "898 - Dock, marina, pier, wharf"
+  },
+  {
+    "label": "899 - Residential or self-storage units",
+    "value": "899 - Residential or self-storage units"
+  },
+  {
+    "label": "900 - Outside or special property, other",
+    "value": "900 - Outside or special property, other"
+  },
+  {
+    "label": "919 - Dump, sanitary landfill",
+    "value": "919 - Dump, sanitary landfill"
+  },
+  {
+    "label": "921 - Bridge, trestle",
+    "value": "921 - Bridge, trestle"
+  },
+  {
+    "label": "922 - Tunnel",
+    "value": "922 - Tunnel"
+  },
+  {
+    "label": "926 - Outbuilding, protective shelter",
+    "value": "926 - Outbuilding, protective shelter"
+  },
+  {
+    "label": "931 - Open land or field",
+    "value": "931 - Open land or field"
+  },
+  {
+    "label": "935 - Campsite with utilities",
+    "value": "935 - Campsite with utilities"
+  },
+  {
+    "label": "936 - Vacant lot",
+    "value": "936 - Vacant lot"
+  },
+  {
+    "label": "937 - Beach",
+    "value": "937 - Beach"
+  },
+  {
+    "label": "938 - Graded and cared-for plots of land",
+    "value": "938 - Graded and cared-for plots of land"
+  },
+  {
+    "label": "940 - Water area, other",
+    "value": "940 - Water area, other"
+  },
+  {
+    "label": "941 - Open ocean, sea or tidal waters",
+    "value": "941 - Open ocean, sea or tidal waters"
+  },
+  {
+    "label": "946 - Lake, river, stream",
+    "value": "946 - Lake, river, stream"
+  },
+  {
+    "label": "951 - Railroad right-of-way",
+    "value": "951 - Railroad right-of-way"
+  },
+  {
+    "label": "952 - Railroad yard",
+    "value": "952 - Railroad yard"
+  },
+  {
+    "label": "960 - Street, other",
+    "value": "960 - Street, other"
+  },
+  {
+    "label": "961 - Highway or divided highway",
+    "value": "961 - Highway or divided highway"
+  },
+  {
+    "label": "962 - Residential street, road or residential driveway",
+    "value": "962 - Residential street, road or residential driveway"
+  },
+  {
+    "label": "963 - Street or road in commercial area",
+    "value": "963 - Street or road in commercial area"
+  },
+  {
+    "label": "965 - Vehicle parking area",
+    "value": "965 - Vehicle parking area"
+  },
+  {
+    "label": "972 - Aircraft runway",
+    "value": "972 - Aircraft runway"
+  },
+  {
+    "label": "973 - Aircraft taxiway",
+    "value": "973 - Aircraft taxiway"
+  },
+  {
+    "label": "974 - Aircraft loading area",
+    "value": "974 - Aircraft loading area"
+  },
+  {
+    "label": "981 - Construction site",
+    "value": "981 - Construction site"
+  },
+  {
+    "label": "982 - Oil or gas field",
+    "value": "982 - Oil or gas field"
+  },
+  {
+    "label": "983 - Pipeline, power line or other utility right-of-way",
+    "value": "983 - Pipeline, power line or other utility right-of-way"
+  },
+  {
+    "label": "984 - Industrial plant yard - area",
+    "value": "984 - Industrial plant yard - area"
+  },
+  {
+    "label": "NNN - None",
+    "value": "NNN - None"
+  },
+  {
+    "label": "UUU - Undetermined",
+    "value": "UUU - Undetermined"
+  }
+]

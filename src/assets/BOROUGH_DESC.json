@@ -1,0 +1,22 @@
+[
+    {
+        "value": "Brooklyn",
+        "label": "Brooklyn"
+    },
+    {
+        "value": "Queens",
+        "label": "Queens"
+    },
+    {
+        "value": "Staten Island",
+        "label": "Staten Island"
+    },
+    {
+        "value": "Bronx",
+        "label": "Bronx"
+    },
+    {
+        "value": "Manhattan",
+        "label": "Manhattan"
+    }
+]

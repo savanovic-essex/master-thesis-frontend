@@ -1,0 +1,16 @@
+.map-container {
+    position: relative;
+    min-width: 100%;
+    height: calc(100vh - 150px);
+}
+
+.no-gutters {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.scrollable-col {
+    height: 100vh; /* Full height of the viewport */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Disables horizontal scrolling */
+}
