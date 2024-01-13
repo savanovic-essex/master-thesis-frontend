@@ -23,8 +23,8 @@ export const StreetHighway: FunctionComponent<StreetHighwayProps> = ({street, se
 				isSearchable // Allows the input to be searchable
 				value={street} // The current value of the select input
 				cacheOptions // Caches the loaded options for efficiency
-				onChange={(street) => setStreet(street)}
-				loadOptions={(inputValue, callback) => loadOptions(STREET_HIGHWAY, inputValue, callback)}
+				onChange={(street: StreetHighwayOption) => setStreet(street)}
+				loadOptions={(inputValue: string, callback: (options: StreetHighwayOption[]) => void) => loadOptions(STREET_HIGHWAY, inputValue, callback)}
 				defaultOptions={STREET_HIGHWAY.slice(0, 50)} />
 		</FormGroup>
 	)

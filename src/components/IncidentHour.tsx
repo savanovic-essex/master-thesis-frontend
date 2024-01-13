@@ -20,9 +20,14 @@ export const IncidentHour: FunctionComponent<IncidentHourProps> = ({hour, setHou
 			<Select
 				isClearable // Allows the option to clear the selection
 				isSearchable // Allows the input to be searchable
-				options={INCIDENT_HOUR.sort((a, b) => a.value - b.value)}
+				options={INCIDENT_HOUR.sort((a, b) => {
+					// Ensure both values are treated as numbers
+					const valueA = typeof a.value === 'number' ? a.value : parseInt(a.value);
+					const valueB = typeof b.value === 'number' ? b.value : parseInt(b.value);
+					return valueA - valueB;
+				})}
 				value={hour} // The current value of the select input
-				onChange={(hour) => setHour(hour)}
+				onChange={(hour: IncidentHourOption) => setHour(hour)}
 			/>
 		</FormGroup>
 	)

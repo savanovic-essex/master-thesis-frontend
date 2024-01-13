@@ -23,8 +23,8 @@ export const ZipCode: FunctionComponent<ZipCodeProps> = ({ zip, setZip, loadOpti
 				isSearchable // Allows the input to be searchable
 				value={zip} // The current value of the select input
 				cacheOptions // Caches the loaded options for efficiency
-				onChange={(selectedOption) => setZip(selectedOption)}
-				loadOptions={(inputValue, callback) => loadOptions(ZIP_CODE, inputValue, callback)}
+				onChange={(selectedOption: ZipCodeOption) => setZip(selectedOption)}
+				loadOptions={(inputValue: string, callback: (options: ZipCodeOption[]) => void) => loadOptions(ZIP_CODE, inputValue, callback)}
 				defaultOptions={ZIP_CODE.slice(0, 50)} />
 		</FormGroup>
 	);

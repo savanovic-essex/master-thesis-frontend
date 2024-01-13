@@ -23,8 +23,8 @@ export const IncidentType: FunctionComponent<IncidentTypeProps> = ({incidentType
 				isSearchable
 				value={incidentType}
 				cacheOptions
-				onChange={(incidentType) => setIncidentType(incidentType)}
-				loadOptions={(inputValue, callback) => loadOptions(INCIDENT_TYPES, inputValue, callback)}
+				onChange={(incidentType: IncidentTypeOption) => setIncidentType(incidentType)}
+				loadOptions={(inputValue: string, callback: (options: IncidentTypeOption[]) => void) => loadOptions(INCIDENT_TYPES, inputValue, callback)}
 				defaultOptions />
 		</FormGroup>
 	)

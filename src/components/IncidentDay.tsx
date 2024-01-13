@@ -20,9 +20,14 @@ export const IncidentDay: FunctionComponent<IncidentDayProps> = ({day, setDay}) 
 			<Select
 				isClearable // Allows the option to clear the selection
 				isSearchable // Allows the input to be searchable
-				options={INCIDENT_DAY_OF_WEEK.sort((a, b) => a.value - b.value)}
+				options={INCIDENT_DAY_OF_WEEK.sort((a, b) => {
+					// Ensure both values are treated as numbers
+					const valueA = typeof a.value === 'number' ? a.value : parseInt(a.value);
+					const valueB = typeof b.value === 'number' ? b.value : parseInt(b.value);
+					return valueA - valueB;
+				})}
 				value={day} // The current value of the select input
-				onChange={(day) => setDay(day)}
+				onChange={(day: IncidentDayOption) => setDay(day)}
 			/>
 		</FormGroup>
 	)

@@ -23,8 +23,8 @@ export const PropertyType: FunctionComponent<PropertyTypeProps> = ({propertyType
 				isSearchable
 				value={propertyType}
 				cacheOptions
-				onChange={(propertyType) => setPropertyType(propertyType)}
-				loadOptions={(inputValue, callback) => loadOptions(PROPERTY_TYPES, inputValue, callback)}
+				onChange={(propertyType: PropertyTypeOption) => setPropertyType(propertyType)}
+				loadOptions={(inputValue: string, callback: (options: PropertyTypeOption[]) => void) => loadOptions(PROPERTY_TYPES, inputValue, callback)}
 				defaultOptions />
 		</FormGroup>
 	)

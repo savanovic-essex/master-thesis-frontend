@@ -23,8 +23,8 @@ export const Borough: FunctionComponent<BoroughProps> = ({borough, setBorough, l
 				isSearchable // Allows the input to be searchable
 				value={borough} // The current value of the select input
 				cacheOptions // Caches the loaded options for efficiency
-				onChange={(borough) => setBorough(borough)}
-				loadOptions={(inputValue, callback) => loadOptions(BOROUGH_DESC, inputValue, callback)}
+				onChange={(selectedOption: BoroughOption) => setBorough(selectedOption)}
+				loadOptions={(inputValue: string, callback: (options: BoroughOption[]) => void) => loadOptions(BOROUGH_DESC, inputValue, callback)}
 				defaultOptions={BOROUGH_DESC.slice(0, 50)} />
 		</FormGroup>
 	)

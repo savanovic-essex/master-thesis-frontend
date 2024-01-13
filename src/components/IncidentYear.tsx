@@ -19,9 +19,14 @@ export const IncidentYear: FunctionComponent<IncidentYearProps> = ({selectedYear
 			<Label for="YEAR">Year</Label>
 			<Select
 				isClearable // Allows the option to clear the selection
-				options={YEAR.sort((a, b) => a.value - b.value)}
+				options={YEAR.sort((a, b) => {
+					// Ensure both values are treated as numbers
+					const valueA = typeof a.value === 'number' ? a.value : parseInt(a.value);
+					const valueB = typeof b.value === 'number' ? b.value : parseInt(b.value);
+					return valueA - valueB;
+				})}
 				value={selectedYear} // The current value of the select input
-				onChange={(selectedYear) => setSelectedYear(selectedYear)}
+				onChange={(selectedYear: IncidentYearOption) => setSelectedYear(selectedYear)}
 			/>
 		</FormGroup>
 	)

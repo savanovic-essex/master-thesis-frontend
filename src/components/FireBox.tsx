@@ -23,8 +23,8 @@ export const FireBox: FunctionComponent<FireBoxProps> = ({fireBox, setFireBox, l
 				isSearchable // Allows the input to be searchable
 				value={fireBox} // The current value of the select input
 				cacheOptions // Caches the loaded options for efficiency
-				onChange={(fireBox) => setFireBox(fireBox)}
-				loadOptions={(inputValue, callback) => loadOptions(FIRE_BOX, inputValue, callback)}
+				onChange={(fireBox: FireBoxOption) => setFireBox(fireBox)}
+				loadOptions={(inputValue: string, callback: (options: FireBoxOption[]) => void) => loadOptions(FIRE_BOX, inputValue, callback)}
 				defaultOptions={FIRE_BOX.slice(0, 50)} />
 		</FormGroup>
 	)

@@ -20,9 +20,14 @@ export const IncidentMonth: FunctionComponent<IncidentMonthProps> = ({month, set
 			<Select
 				isSearchable
 				isClearable
-				options={INCIDENT_MONTH.sort((a, b) => a.value - b.value)}
+				options={INCIDENT_MONTH.sort((a, b) => {
+					// Ensure both values are treated as numbers
+					const valueA = typeof a.value === 'number' ? a.value : parseInt(a.value);
+					const valueB = typeof b.value === 'number' ? b.value : parseInt(b.value);
+					return valueA - valueB;
+				})}
 				value={month}
-				onChange={(month) => setMonth(month)}
+				onChange={(month: IncidentMonthOption) => setMonth(month)}
 			/>
 		</FormGroup>
 	)
