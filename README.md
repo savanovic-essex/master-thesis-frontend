@@ -7,6 +7,9 @@ Developed using TypeScript and powered by Vite, this application integrates vari
 This application showcases the practical use of a predictive model for fire incident response. Users can input incident details, and the app, using a Flask-based API and a LightGBM model,
 predicts the required number of response units. It features a map visualization for the incident location and a 'Use Test Data' button for easy demonstration.
 
+The map component focuses on New York City and displays all fire boxes, provided by NYC Open Data's (2019) "In-Service Alarm Box Locations" dataset.
+City's boundaries are also visualised, in a form of a mask, with the help of another NYC Open Data (2018) dataset called "Borough Boundaries".
+
 ## Features
 - **Incident Data Input**: Users can input various incident parameters to predict the required number of units.
 - **Map Visualization**: The app includes a map view, showing the location of the incident.
@@ -114,6 +117,10 @@ Meta Open Source (n.d.) React. react.dev. Available from: https://react.dev/ [Ac
 
 npm. (n.d.). dotenv. Available from: https://www.npmjs.com/package/dotenv [Accessed 13 December 2023].
 
+NYC Open Data (2018) Borough Boundaries | NYC Open Data. Available from: https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm  [Accessed 26 October 2023].
+
+NYC Open Data (2019) In-Service Alarm Box Locations. Available from: https://data.cityofnewyork.us/Public-Safety/In-Service-Alarm-Box-Locations/v57i-gtxb [Accessed 17 October 2023].
+
 Otto, M. (2022) Bootstrap. Getbootstrap.com. Available from: https://getbootstrap.com/ [Accessed 17 October 2023].
 
 preactjs.com. (n.d.) Preact. Available from: https://preactjs.com/ [Accessed 11 November 2023].
@@ -127,7 +134,4 @@ Sheldrick, D. (n.d.) ds300/patch-package. GitHub. Available from: https://github
 Microsoft (2015) TypeScript - JavaScript that scales. Typescriptlang.org. Available from: https://www.typescriptlang.org/ [Accessed 11 November 2023].
 
 vitejs.dev. (n.d.) Vite. Available fromm: https://vitejs.dev/ [Accessed 11 November 2023]
-
-
-
 
